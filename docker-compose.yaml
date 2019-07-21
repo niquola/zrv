@@ -1,0 +1,9 @@
+version: '2'
+services:
+  build-lwan:
+    image: zrv
+    container_name: zrv
+    ports:
+      - "9999:8080"
+    volumes:
+      - "./:/zrv"
