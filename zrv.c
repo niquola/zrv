@@ -47,7 +47,7 @@ void * process(void * ptr)
 	if (!ptr) pthread_exit(0);
 	int conn = (int) ptr;
 
-  printf("Connection %ld; thread %ld", conn, pthread_self());
+  printf("Connection %d; thread %ld", conn, pthread_self());
 
   while (1) {
     printf("\nloop %d\n", num);
@@ -153,7 +153,7 @@ int main()
     err(1,"Could not listen: %s\n", strerror(errno));
   }
 
-  printf("Server started at 8080");
+  printf("Server started at 8080\n\n");
 
 	int conn;
 	struct sockaddr conn_address;
