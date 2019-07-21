@@ -11,3 +11,6 @@ init:
 env:
 	docker-compose up -d
 	docker exec -it zrv bash
+
+run:
+	cd example && ../zrv
